@@ -10,6 +10,7 @@ async def main():
     try:db.create_table_users()
     except Exception as e:print(f"User:\n {e}")
     await set_default_commands(bot)
+    await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
     
 
