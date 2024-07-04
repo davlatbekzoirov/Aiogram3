@@ -9,7 +9,7 @@ from aiogram.types import Update
 from loader import dp
 
 
-@dp.errors_handler()
+@dp.errors()
 async def errors_handler(update: Update, exception: Exception):
     """
     Обработчик исключений. Ловит все исключения внутри задач.
