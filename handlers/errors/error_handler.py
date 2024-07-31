@@ -17,6 +17,9 @@ async def errors_handler(update: Update, exception: Exception):
     :param exception:
     :return: логгирование в stdout
     """
+    if isinstance(exception, Exception):
+        print(f"An error occurred: {exception}")
+        
     if isinstance(exception, TelegramMigrateToChat):
         logging.exception("Exception raised when chat has been migrated to a supergroup.")
         return True
