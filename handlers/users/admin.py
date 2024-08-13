@@ -4,7 +4,7 @@ from data.config import ADMINS
 from aiogram.types import Message
 from keyboards.default.admins_keyboard import admin_button
 from aiogram.filters import Command
-from states.reklama import Adverts
+from states.reklama import Adverts, BookState
 from aiogram.fsm.context import FSMContext
 import time
 from aiogram import F
