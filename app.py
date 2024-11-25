@@ -17,6 +17,7 @@ async def main():
     await bot.delete_webhook(drop_pending_updates=True)
     await db.start_polling(bot, close_bot_session=True)
 
+
 if __name__ == '__main__':
     try:
         asyncio.run(main())  
